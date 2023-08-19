@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+  animation: fadeIn 2s ease-in-out;
+  background-color: rgb(6, 6, 6);
+  background-image: url(baground.pg);
+  }
+ 
+
+form { border: 3px solid #dde421;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+input[type=text], input[type=password], input[type=number], input[type=email], input[type=date]{
+  width: 95%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #040404;
+}
+
+label {
+  color: rgb(7, 7, 7);
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+select:hover option:hover {
+    background-color: yellow;
+    color: black;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+  background-color: rgb(4, 4, 247);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+label{
+  color: aliceblue;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 25%;
+  width: 50%;
+}
+.container p{
+  color: rgb(8, 25, 254);
+}
+.container h2{
+  color: rgb(14, 14, 14);
+}
+
+</style>
+
+
+</head>
+<body background="">
+
+
+<div class="container">
+    <form action="" method="post" id="myForm">
+        <h2 style="color: aliceblue;"><center>REGISTRATION<center></h2>
+        <input type="text" placeholder="First Name" name="fname" required id="myInput1">
+        <input type="text" placeholder="Last Name" name="lname" required id="myInput2">
+        <label for="dob" >Date of Birth:</label>
+        <input type="date"  name="dob" required id="myInput3"><br>
+        <input type="number" placeholder="Age" name="age" required id="myInput4" oninput="limitInputLength(this, 2)">
+        <label>Gender:</label>
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male" required id="myInput"> Male
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female" required id="myInput"> Female
+            </label>
+            <label for="other">
+                <input type="radio" id="other" name="gender" value="other" required id="myInput"> Other
+            </label>
+        <input type="number" placeholder="Phone" name="Phone" required id="myInput5">
+        <input type="text" placeholder="Email Address" name="email" required id="myInput6">
+        <input type="text" placeholder="Address" name="Address" required id="myInput7">
+        <label for="city">City:</label>
+        <select id="city" name="city" >
+                <option>City 1</option>
+                <option>City 2</option>
+                <option>City 3</option>
+        </select><br>
+            
+        <label for="state">State:</label>
+        <select id="state" name="state">
+                <option>Kerala</option>
+                <option>Tamil Nadu</option>
+                <option>Karnataka</option>
+        </select>
+        <input type="text" placeholder="Username" name="uname" required id="myInput8">
+        <input type="password" placeholder=" Password" name="psw" required id="myInput9">
+        <input type="password" placeholder=" Confirm Password" name="psw" required id="myInput10">
+        <input type="checkbox" checked="checked" name="remember" style="color: aliceblue;"> <a style="color: aliceblue;" id="remember">Remember me</a>
+        <p>By creating an account you agree to our <a href="file:///C:/Users/sharu/OneDrive/Desktop/Oracle/about.html" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        </label>    
+        <button type="submit">Register</button>
+        
+
+    </form>
+</div>
+<script>
+
+  
+const loginForm = document.getElementById("myForm");
+const emailInput = document.getElementById("myInput6");
+const number = document.getElementById("myInput5");
+const passwordInput = document.getElementById("myInput9");
+const confirmPasswordInput = document.getElementById("myInput10");
+let rememberCheckbox = document.getElementById("remember");
+
+
+
+
+
+loginForm.addEventListener("submit", function(event) {
+    if (!isValidEmail(emailInput.value)) {
+        event.preventDefault(); // Prevent form submission
+        alert("Please enter a valid email address.");
+        emailInput.style.borderColor = "red";
+    }
+    else {
+      emailInput.style.borderColor= ""; // Reset border color
+    }
+    if (!isValidnumber(number.value)) {
+        event.preventDefault(); // Prevent form submission
+        alert("Please enter a valid phone number.");
+        number.style.borderColor = "red";
+    }
+    else {
+        number.style.borderColor = ""; // Reset border color
+    }
+    if (!isValidpassword(passwordInput.value, confirmPasswordInput.value)){
+      event.preventDefault(); // Prevent form submission
+        alert("Passwords do not match. Please enter the same password in confirm password.");
+        confirmPasswordInput.style.borderColor = "red";
+    }
+    else {
+      confirmPasswordInput.style.borderColor= ""; // Reset border color
+    }
+  
+
+
+
+
+});
+
+function isValidEmail(email) {
+    // Basic email validation using regular expression
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+ 
+function isValidnumber(number){
+  const phonePattern = /^[0-9]{3}[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;
+    return phonePattern.test(number);
+
+      }
+
+      function limitInputLength(inputElement, maxLength) {
+    if (inputElement.value.length > maxLength) {
+        inputElement.value = inputElement.value.slice(0, maxLength);
+    }
+}
+function isValidpassword(password,confirm) {
+    // Basic email validation using regular expression
+    return passwordInput == confirmPasswordInput
+   
+}
+
+
+
+
+
+
+
+
+      let citySelect = document.getElementById("city");
+citySelect.addEventListener("focusin", myFocusFunction);
+citySelect.addEventListener("focusout", myBlurFunction);
+
+let stateSelect = document.getElementById("state");
+stateSelect.addEventListener("focusin", myFocusFunction);
+stateSelect.addEventListener("focusout", myBlurFunction);
+
+
+
+for (let i = 1; i <= 17; i++) {
+  let input = document.getElementById("myInput" + i);
+  input.addEventListener("focusin", myFocusFunction);
+  input.addEventListener("focusout", myBlurFunction);
+}
+
+
+function myFocusFunction() {
+  this.style.backgroundColor = "yellow";
+}
+
+function myBlurFunction() {
+  this.style.backgroundColor = "";  
+}
+
+
+
+
+
+    
+</script>
+</body>
+</html>

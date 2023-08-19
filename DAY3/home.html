@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exacore - Home</title>
+    <style>
+     .modal-content{
+       
+    width: 50%;
+    margin-left: 27%;
+  }
+
+
+    .modal-content img {
+            width: 100%;
+            height: 600px;
+        }
+        .hero{
+            background-image: url(baground.jpg);
+        }
+        .im{
+            background-image: url(baground.jpg);
+            
+        }
+        nav li a:hover{
+            color: yellow;
+        
+        
+        }
+        .hero p:hover{
+            color: yellow;
+
+        }
+        .hero h1:hover{
+            color: yellow;
+
+        }
+    
+    </style>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="training.css" rel="stylesheet">
+</head>
+
+    <header>
+        <div class="logo">
+            <img src="C:\classys\day 1\Exacore\exacore_logo.jpg" alt="Exacore Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/classys/day 1/Exacore/about.html">ABOUT US</a></li>
+                <li><a href="file:///C:/classys/day 1/Exacore/contact.html">CONTACT US</a></li>
+                <li><a href="file:///C:/classys/day 1/Exacore/registration.html">REGISTER</a></li>
+                <li><a href="file:///C:/classys/day 1/Exacore/login.html">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <div class="im">
+            <div id="myModal" class="modal">
+                <span class="close" style="color: aliceblue;">&times;</span>
+                <div class="modal-content">
+                    <img id="modalImg" src="" alt="">
+                </div>
+              </div>
+            
+       
+
+    <section class="hero" style="color: aliceblue; ">
+        <h1>Empowering Innovation</h1>
+        <p>Discover Exacore's solutions for a connected digital world.</p>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <img src="cloud.png" alt="Cloud Icon">
+            <h2>Cloud Solutions</h2>
+            <p>Unlock new possibilities with our cutting-edge cloud offerings.</p>
+        </div>
+        <div class="feature">
+            <img src="ai.png" alt="AI Icon">
+            <h2>AI & Analytics</h2>
+            <p>Turn data into insights and make informed decisions.</p>
+        </div>
+        <div class="feature">
+            <img src="security1.png" alt="Security Icon">
+            <h2>Security</h2>
+            <p>Protect your business with our advanced security solutions.</p>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/login/">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/i/flow/login">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/login">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <div class="address">
+            <p>123 Exacore Way, chennai City, CA 94065</p>
+        </div>
+        <p>&copy; 2023 Exacore Corporation. All rights reserved.</p>
+    </footer>
+        </div>
+       
+        <script>
+            // JavaScript to handle the modal
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("modalImg");
+            const closeBtn = document.getElementsByClassName("close")[0];
+          
+            // Function to open the modal
+            function openModal(imageSrc) {
+                modal.style.display = "block";
+                modalImg.src = imageSrc;
+            }
+          
+            // Function to close the modal
+            function closeModal() {
+                modal.style.display = "none";
+            }
+          
+            // Attach click event to each image in the table
+            const images = document.querySelectorAll("img");
+            images.forEach((img) => {
+                img.addEventListener("click", () => openModal(img.src));
+            });
+          
+            // Close the modal when the close button is clicked
+            closeBtn.onclick = closeModal;
+          
+            // Close the modal when the user clicks outside of it
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            };
+ </script>
+
+</body>
+</html>
