@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+  animation: fadeIn 2s ease-in-out;
+  background-color: rgb(6, 6, 6);
+  background-image: url(baground.pg);
+  }
+ 
+
+form { border: 3px solid #dde421;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+input[type=text], input[type=password], input[type=number], input[type=email], input[type=date]{
+  width: 95%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #040404;
+}
+
+label {
+  color: rgb(7, 7, 7);
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+select:hover option:hover {
+    background-color: yellow;
+    color: black;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+  background-color: rgb(4, 4, 247);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+label{
+  color: aliceblue;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 25%;
+  width: 50%;
+}
+.container p{
+  color: rgb(8, 25, 254);
+}
+.container h2{
+  color: rgb(14, 14, 14);
+}
+.hero{
+            background-image: url(baground.jpg);
+        }
+        .im{
+            background-image: url(baground.jpg);
+            
+        }
+        nav li a:hover{
+            color: yellow;
+        
+        
+        }
+        .hero p:hover{
+            color: yellow;
+
+        }
+        .hero h1:hover{
+            color: yellow;
+
+        }
+    
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="training.css" rel="stylesheet">
+
+
+</head>
+<body background="">
+  <header>
+    <div class="logo">
+        <img src="C:\classys\day 1\Exacore\exacore_logo.jpg" alt="Exacore Logo">
+    </div>
+    <nav>
+        <ul>
+          <li><a href="file:///C:/classys/DAY3/home.html">Home</a></li>
+          <li><a href="file:///C:/classys/DAY3/about.html">About Us</a></li>
+          <li><a href="file:///C:/classys/DAY3/contact.html">Contact Us</a></li>
+          <li><a href="file:///C:/classys/DAY3/register2.html">Register</a></li>
+          <li><a href="file:///C:/classys/DAY3/login.html">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="container">
+    <form action="" method="post" id="myForm">
+        <h2 style="color: aliceblue;"><center>REGISTRATION<center></h2>
+          <label for="myInput1">First Name:</label>
+        <input type="text" placeholder="First Name" name="fname" required id="myInput1">
+        <label for="myInput2">Last Name:</label>
+        <input type="text" placeholder="Last Name" name="lname" required id="myInput2">
+        <label for="dob" >Date of Birth:</label>
+        <input type="date"  name="dob" required id="myInput3" max="2005-01-01"><br>
+        <input type="number" placeholder="Age" name="age" required id="myInput4" readonly>
+        <label>Gender:</label>
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male" required id="myInput"> Male
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female" required id="myInput"> Female
+            </label>
+            <label for="other">
+                <input type="radio" id="other" name="gender" value="other" required id="myInput"> Other
+            </label>
+        <input type="number" placeholder="Phone" name="Phone" required id="myInput5">
+        <span id="number-error" style="color: red; display: none;">Phone number must be at least 10 characters long.</span>
+        <input type="text" placeholder="Email Address" name="email" required id="myInput6">
+        <input type="text" placeholder="Address" name="Address" required id="myInput7">
+        <label for="state">State:</label>
+        <select id="state" name="state" onchange="populateCities()">
+            <option value="Kerala">Kerala</option>
+            <option value="TamilNadu">Tamil Nadu</option>
+            <option value="Karnataka">Karnataka</option>
+        </select>
+        <label for="city">City:</label>
+        <select id="city" name="city">
+            
+        </select><br>
+        <input type="text" placeholder="Username" name="uname" required id="myInput8">
+        <input type="password" placeholder=" Password" name="psw" required id="myInput9">
+        <span id="password-error" style="color: red; display: none;">Password must be at least 8 characters long.</span>
+        <input type="password" placeholder=" Confirm Password" name="psw" required id="myInput10">
+        <input type="checkbox" checked="checked" name="remember" style="color: aliceblue;"> <a style="color: aliceblue;" id="remember">Remember me</a>
+        <p>By creating an account you agree to our <a href="file:///C:/Users/sharu/OneDrive/Desktop/Oracle/about.html" style="color:dodgerblue">Terms & Privacy</a>.</p>
+        </label>    
+        <button type="submit">Register</button>
+        
+
+    </form>
+</div>
+<footer>
+  <div class="social-icons">
+      <a href="https://www.facebook.com/login/">
+          <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com/i/flow/login">
+          <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/login">
+          <i class="fab fa-linkedin"></i>
+      </a>
+        </div>
+  <div class="address">
+      <p>123 Exacore Way, chennai City, CA 94065</p>
+  </div>
+  <p>&copy; 2023 Exacore Corporation. All rights reserved.</p>
+</footer>
+<script>
+
+  
+const loginForm = document.getElementById("myForm");
+const emailInput = document.getElementById("myInput6");
+const number = document.getElementById("myInput5");
+const passwordInput = document.getElementById("myInput9");
+// const passwordError = document.getElementById("password-error");
+// const numbererror = document.getElementById("number-error");
+
+const confirmPasswordInput = document.getElementById("myInput10");
+let rememberCheckbox = document.getElementById("remember");
+
+
+
+
+
+loginForm.addEventListener("submit", function(event) {
+    if (!isValidEmail(emailInput.value)) {
+        event.preventDefault(); 
+        alert("Please enter a valid email address.");
+        emailInput.style.borderColor = "red";
+    }
+    else {
+      emailInput.style.borderColor= ""; 
+    }
+    if (!isValidnumber(number.value)) {
+        event.preventDefault(); 
+        alert("Please enter a valid phone number.");
+        number.style.borderColor = "red";
+    }
+    else {
+        number.style.borderColor = ""; 
+    }
+
+   
+
+
+    if (!isValidpassword(passwordInput.value, confirmPasswordInput.value)){
+      event.preventDefault(); 
+        alert("Passwords do not match. Please enter the same password in confirm password.");
+        confirmPasswordInput.style.borderColor = "red";
+    }
+    else {
+      confirmPasswordInput.style.borderColor= "";
+    }
+  
+
+    if (!isValidPass(passwordInput.value)) {
+        event.preventDefault(); 
+        alert("Password must at least contain 8 characters.");
+        passwordInput.style.borderColor = "red";
+    }
+    else {
+      passwordInput.style.borderColor = ""; 
+    }
+
+
+
+});
+
+function isValidEmail(email) {
+    
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+ 
+function isValidnumber(number){
+  const phonePattern = /^[0-9]{3}[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;
+    return phonePattern.test(number);
+
+      }
+
+      function limitInputLength(inputElement, maxLength) {
+    if (inputElement.value.length > maxLength) {
+        inputElement.value = inputElement.value.slice(0, maxLength);
+    }
+}
+
+
+function isValidpassword(password,confirm) {
+   
+    return passwordInput == confirmPasswordInput
+   
+}
+
+function isValidPass(password) {
+    return passwordInput.length >= 8;
+}
+
+
+
+
+function calculateAge(dateOfBirth) {
+    const today = new Date();
+    const dob = new Date(dateOfBirth);
+    let age = today.getFullYear() - dob.getFullYear();
+    const monthDiff = today.getMonth() - dob.getMonth();
+
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+        age--;
+    }
+
+    return age;
+}
+
+
+const dobInput = document.getElementById("myInput3");
+const ageInput = document.getElementById("myInput4");
+
+dobInput.addEventListener("change", function() {
+    const age = calculateAge(this.value);
+    ageInput.value = age;
+});
+
+
+const initialAge = calculateAge(dobInput.value);
+ageInput.value = initialAge;
+
+
+// passwordInput.addEventListener("focusout", function() {
+//     if (passwordInput.value.length < 8) {
+//         passwordError.style.display = "block";
+//     } else {
+//         passwordError.style.display = "none";
+//     }
+// });
+
+
+
+
+const citiesByState = {
+    Kerala: ["Kochi", "Thrissur", "Malappuram"],
+    TamilNadu: ["Chennai", "Salem", "Coimbatore"],
+    Karnataka: ["Bangalore", "Whitefield", "100 feet"]
+};
+
+function populateCities() {
+    const stateDropdown = document.getElementById("state");
+    const cityDropdown = document.getElementById("city");
+
+    const selectedState = stateDropdown.value;
+    const cities = citiesByState[selectedState];
+
+    cityDropdown.innerHTML = "";
+    for (const city of cities) {
+        const option = document.createElement("option");
+        option.text = city;
+        cityDropdown.add(option);
+    }
+}
+
+populateCities();
+
+
+
+
+      let citySelect = document.getElementById("city");
+citySelect.addEventListener("focusin", myFocusFunction);
+citySelect.addEventListener("focusout", myBlurFunction);
+
+let stateSelect = document.getElementById("state");
+stateSelect.addEventListener("focusin", myFocusFunction);
+stateSelect.addEventListener("focusout", myBlurFunction);
+
+
+
+for (let i = 1; i <= 17; i++) {
+  let input = document.getElementById("myInput" + i);
+  input.addEventListener("focusin", myFocusFunction);
+  input.addEventListener("focusout", myBlurFunction);
+}
+
+
+function myFocusFunction() {
+  this.style.backgroundColor = "yellow";
+}
+
+function myBlurFunction() {
+  this.style.backgroundColor = "";  
+}
+
+
+
+
+
+    
+</script>
+</body>
+</html>

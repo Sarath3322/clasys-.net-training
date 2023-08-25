@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <style>
+    .error-message {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <form id="registrationForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" onfocusout="checkUsername()">
+    <span id="usernameError" class="error-message"></span>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" onfocusout="checkEmail()">
+    <span id="emailError" class="error-message"></span>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <br>
+    <button type="submit">Register</button>
+  </form>
+
+  <script>
+    function checkUsername() {
+      const username = document.getElementById('username').value;
+      const usernameError = document.getElementById('usernameError');
+      
+      if (username.length < 5) {
+        usernameError.textContent = 'Username must be at least 5 characters';
+      } else {
+        usernameError.textContent = '';
+      }
+    }
+
+    function checkEmail() {
+      const email = document.getElementById('email').value;
+      const emailError = document.getElementById('emailError');
+      
+      if (!isValidEmail(email)) {
+        emailError.textContent = 'Invalid email address';
+      } else {
+        emailError.textContent = '';
+      }
+    }
+
+    function isValidEmail(email) {
+      // Basic email validation regex, you can replace this with a more robust one
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script>
+</body>
+</html>

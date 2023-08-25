@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+background-color: rgb(0, 0, 0);
+background-image: url(bag3.jpg);
+background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+form {border: 1px solid #4e4444;
+  background-color: #2b2727;
+margin-top: 50px;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 4px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: rgb(10, 10, 243);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.container h2{
+  color: #f1f1f1;
+}
+.container p{
+  color: #f1f1f1;
+}
+
+.container {
+  margin-right: 40%;
+  
+  padding: 60px;
+  width: 50%;
+  height: 600px;
+
+  margin-left: 20%;
+}
+label{
+  color: #f1f1f1;
+}
+.me{
+  color: #f1f1f1;
+}
+
+
+span.psw {
+  float: right;
+  color: #f1f1f1;
+  
+}
+span.psw a{
+ 
+  color: #f1f1f1;
+  
+}
+
+.hero{
+            background-image: url(baground.jpg);
+        }
+        .im{
+            background-image: url(baground.jpg);
+            
+        }
+        nav li a:hover{
+            color: yellow;
+        
+        
+        }
+        .hero p:hover{
+            color: yellow;
+
+        }
+        .hero h1:hover{
+            color: yellow;
+
+        }
+
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="training.css" rel="stylesheet">
+</head>
+<body >
+  <header>
+    <header>
+      <div class="logo">
+          <img src="C:\classys\day 1\Exacore\exacore_logo.jpg" alt="Exacore Logo">
+      </div>
+      <nav>
+          <ul>
+            <li><a href="file:///C:/classys/DAY3/home.html">Home</a></li>
+                <li><a href="file:///C:/classys/DAY3/about.html">About Us</a></li>
+                <li><a href="file:///C:/classys/DAY3/contact.html">Contact Us</a></li>
+                <li><a href="file:///C:/classys/DAY3/register2.html">Register</a></li>
+                <li><a href="file:///C:/classys/DAY3/login.html">Login</a></li>
+          </ul>
+      </nav>
+  </header>
+</header>
+
+
+<div class="container" baground="">
+    <form action="" method="post" id="loginForm">
+      
+        <h2 ><center>LOGIN<center></h2>
+        <input type="text" placeholder="Email Address" name="uname" required id="email">
+        <span id="email-error" style="color: red; display: none;">wrong email address.</span>
+        <input type="password" placeholder=" Password" name="psw" required id="password">
+        <span id="password-error" style="color: red; display: none;">Password must be at least 8 characters long.</span>
+        <label id="me">
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+        <span class="psw">Forgot <a href="#">password?</a></span>
+        </label>    
+        <button type="submit" id="btn-submit-reg">LOGIN</button>
+    <p style="color: #f1f1f1;"><center>Not a member? <a href="file:///C:/classys/DAY3/registration.html">Sign up now</a></center></p>
+
+    </form>
+  </div>
+    
+</div>
+<footer>
+  <div class="social-icons">
+      <a href="https://www.facebook.com/login/">
+          <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com/i/flow/login">
+          <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/login">
+          <i class="fab fa-linkedin"></i>
+      </a>
+        </div>
+  <div class="address">
+      <p>123 Exacore Way, chennai City, CA 94065</p>
+  </div>
+  <p>&copy; 2023 Exacore Corporation. All rights reserved.</p>
+</footer>
+<script>
+const loginForm = document.getElementById("loginForm");
+const emailInput = document.getElementById("email");
+const emailerror = document.getElementById("email-error");
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const passwordInput = document.getElementById("password");
+const passwordError = document.getElementById("password-error");
+
+loginForm.addEventListener("submit", function(event) {
+    if (emailInput.style.borderColor === "red" ||
+    passwordInput.style.borderColor === "red") {
+        event.preventDefault(); 
+        alert("Please enter a valid email address.");
+        emailInput.style.borderColor = "red";
+    }
+    else{
+      alert("login succesuful");
+
+    }
+    
+});
+
+emailInput.addEventListener("focusout", function() {
+     if (!emailPattern.test(emailInput.value)) {
+        emailerror.style.display = "block";
+        emailInput.style.borderColor = "red";
+    } else {
+        emailerror.style.display = "none";
+        emailInput.style.borderColor = "";
+    }
+});
+passwordInput.addEventListener("focusout", function() {
+    if (passwordInput.value.length < 8) {
+        passwordError.style.display = "block";
+        passwordInput.style.borderColor = "red";
+    } else {
+        passwordError.style.display = "none";
+        passwordInput.style.borderColor = "";
+    }
+});
+   
+
+
+</script>
+</body>
+</html>
