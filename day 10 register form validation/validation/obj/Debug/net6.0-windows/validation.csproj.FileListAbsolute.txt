@@ -1,0 +1,16 @@
+C:\Users\sarat\OneDrive\Desktop\validation\bin\Debug\net6.0-windows\validation.exe
+C:\Users\sarat\OneDrive\Desktop\validation\bin\Debug\net6.0-windows\validation.deps.json
+C:\Users\sarat\OneDrive\Desktop\validation\bin\Debug\net6.0-windows\validation.runtimeconfig.json
+C:\Users\sarat\OneDrive\Desktop\validation\bin\Debug\net6.0-windows\validation.dll
+C:\Users\sarat\OneDrive\Desktop\validation\bin\Debug\net6.0-windows\validation.pdb
+C:\Users\sarat\OneDrive\Desktop\validation\obj\Debug\net6.0-windows\validation.Form1.resources
+C:\Users\sarat\OneDrive\Desktop\validation\obj\Debug\net6.0-windows\validation.csproj.GenerateResource.cache
+C:\Users\sarat\OneDrive\Desktop\validation\obj\Debug\net6.0-windows\validation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sarat\OneDrive\Desktop\validation\obj\Debug\net6.0-windows\validation.AssemblyInfoInputs.cache
+C:\Users\sarat\OneDrive\Desktop\validation\obj\Debug\net6.0-windows\validation.AssemblyInfo.cs
+C:\Users\sarat\OneDrive\Desktop\validation\obj\Debug\net6.0-windows\validation.csproj.CoreCompileInputs.cache
+C:\Users\sarat\OneDrive\Desktop\validation\obj\Debug\net6.0-windows\validation.dll
+C:\Users\sarat\OneDrive\Desktop\validation\obj\Debug\net6.0-windows\refint\validation.dll
+C:\Users\sarat\OneDrive\Desktop\validation\obj\Debug\net6.0-windows\validation.pdb
+C:\Users\sarat\OneDrive\Desktop\validation\obj\Debug\net6.0-windows\validation.genruntimeconfig.cache
+C:\Users\sarat\OneDrive\Desktop\validation\obj\Debug\net6.0-windows\ref\validation.dll
